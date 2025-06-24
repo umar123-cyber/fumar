@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page – Stylify This</title>
+  <link rel="stylesheet" href="style.css"/>
+  <!-- Add internal CSS here OR link to external file -->
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav id="nav">
+    <!-- Style with dark background, white text, and space between items -->
+    <div class="logo">FreshBox</div>
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#footer">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <!-- Use a blue background, white text, center everything -->
+    <h1 id="heroTitle">Welcome to FreshBox</h1>
+    <p>Your weekly box of fresh, healthy produce — delivered to your door.</p>
+    <button onclick="changeHero()" class="button">Get Started</button>
+    <div class="features-toggle-btn" style="text-align:center; margin:2rem 0;">
+      <button onclick="toggleFeatures()" class="button">Toggle feature</button>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features">
+    <!-- Use flexbox to show 3 columns, style cards with padding and box-shadow -->
+    <div class="feature">
+      <h2>Freshness Guaranteed</h2>
+      <p>We source directly from local farmers.</p>
+    </div>
+    <div class="feature">
+      <h2>Flexible Plans</h2>
+      <p>Pause, change or cancel anytime. No stress.</p>
+    </div>
+    <div class="feature">
+      <h2>Home Delivery</h2>
+      <p>Delivered every Friday, right to your doorstep.</p>
+    </div>
+  </section>
+
+  <!-- Floating Add to Cart Icon -->
+  <div id="cart-float">
+    <button onclick="addToCart()" id="cart-btn" title="Add to Cart">🛒</button>
+    <span id="cart-message"></span>
+  </div>
+
+  <!-- Email Subscription -->
+  <section id="subscribe">
+    <input type="email" id="userEmail" placeholder="Enter your email" />
+    <button onclick="submitEmail()">Subscribe</button>
+    <span id="message"></span>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials">
+    <!-- Use orange background, white text, centered -->
+    <h2>What Our Customers Say</h2>
+    <p id="testimonial">"FreshBox has changed the way I eat. I’m healthier and saving money!"</p>
+    <button onclick="nextTestimonial()">Next Testimonial</button>
+  </section>
+
+  <!-- Product Price Calculator -->
+  <section id="calculator">
+    <input type="number" id="qty" min="1" placeholder="Quantity" />
+    <button onclick="getTotal()">Calculate Total</button>
+    <span id="total"></span>
+  </section>
+
+  <!-- Change Background Color -->
+  <section>
+    <button onclick="changeBg()">Change Background Color</button>
+  </section>
+
+  <!-- Live Clock -->
+  <section>
+    <span id="clock"></span>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <!-- Use dark background, white text, center aligned -->
+    <p>&copy; 2025 FreshBox. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
